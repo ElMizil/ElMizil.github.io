@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
     <title>Miza's website</title>
 </head>
 
 <body>
-
     <nav>
         <div class="nav-logo">
             <a href="#">
@@ -21,9 +21,9 @@
 
         <ul class="nav-links">
             <li class="link"><a href="#">About Me</a></li>
-            <li id="link1" class="link"><a href="#">Skills</a></li>
-            <li id="link2" class="link"><a href="#">Projects</a></li>
-            <li id="link3" class="link"><a href="#">Contact</a></li>
+            <li id="link1" class="link"><a href="#Skills">Skills</a></li>
+            <li id="link2" class="link"><a href="#Projects">Projects</a></li>
+            <li id="link3" class="link"><a href="#Contact">Contact</a></li>
         </ul>
         <button class="btn">Hire Me</button>
     </nav>
@@ -47,7 +47,7 @@
         </div>
     </header>
 
-    <section class="container">
+    <section id="Skills" class="container">
         <h2 class="header">Skills</h2>
         <div class="features">
             <div class="card">
@@ -56,7 +56,6 @@
                 <p>
                     Python expert adept at leveraging the language's versatility to craft efficient solutions from web development to data science. I'm passionate about refining code, solving complex challenges, and contributing to the Python community.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
             </div>
             <div class="card">
                 <span><i class="fas fa-code"></i></span>
@@ -64,7 +63,7 @@
                 <p>
                     Advance in various domains, from systems programming to game development, where I design robust applications and optimize performance. I thrive on crafting efficient, scalable code and enjoy diving into intricate challenges. 
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
             <div class="card">
                 <span><i class="fas fa-window-maximize"></i></span>
@@ -72,7 +71,7 @@
                 <p>
                     Great knowledge front-end and back-end technologies, allowing me to craft responsive, visually appealing websites and powerful, scalable applications. I excel in leveraging HTML, CSS, JavaScript.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
             <div class="card">
                 <span><i class="fas fa-database"></i></span>
@@ -80,7 +79,7 @@
                 <p>
                     I navigate complex datasets to extract valuable insights and drive informed decisions. My expertise lies in using Python, R, and SQL, among other tools, to uncover patterns, trends, and actionable findings that empower businesses.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
             <div class="card">
                 <span><i class="fab fa-react"></i></span>
@@ -88,7 +87,7 @@
                 <p>
                     Expert in leveraging React's component-based architecture to create seamless and dynamic web applications. I excel in utilizing state management, virtual DOM, and modern JavaScript to craft responsive, modular UIs that deliver exceptional user experiences.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
             <div class="card">
                 <span><i class="fab fa-java"></i></span>
@@ -96,7 +95,7 @@
                 <p>
                     Working from enterprise-level solutions to Android app development, leveraging Java's versatility and strong ecosystem. I thrive on writing clean, efficient code, utilizing Java's object-oriented principles to build scalable and secure software solutions that power diverse industries and user experiences.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
             <div class="card">
                 <span><i class="fas fa-server"></i></span>
@@ -104,12 +103,12 @@
                 <p>
                     Capable of analyzing requirements, designing scalable architectures, coding, testing, and deployment. I excel in utilizing various programming languages, frameworks, and methodologies to deliver innovative, reliable, and user-centric software solutions.
                 </p>
-                <a href="#">More info <i class="fa fa-plus"></i></a>
+                
             </div>
         </div>
     </section>
 
-    <section class="container">
+    <section id="Projects" class="container">
         <h2 class="header">Projects</h2>
         <p class="sub-header">
             Some of the projects I have worked on or am currently working on.
@@ -119,44 +118,52 @@
                 <div class="content">
                     <h3>Ticket Printing System</h3>
                     <h4>Windows Forms, C#</h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Developed a Windows Forms application in C# for efficient customer ticket printing.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Designed an intuitive user interface, integrated with a database for data management, and implemented a printing module.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Streamlined ticket issuance, improving customer service and operational efficiency.
-                    </p>
+                    <button onclick="openInfoDialog('infoDialog1')" class="btn">More info</button>
+                    <div id="infoDialog1" class="infoDialog">
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Developed a Windows Forms application in C# for efficient customer ticket printing.
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Designed an intuitive user interface, integrated with a database for data management, and implemented a printing module.
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Streamlined ticket issuance, improving customer service and operational efficiency.
+                        </p>
+                        <button onclick="closeInfoDialog('infoDialog1')" class="btn">Close</button>
+                    </div>
                 </div>
-                <button class="btn">More info</button>
             </div>
             <div class="card">
                 <div class="content">
                     <h3>E-commerce Price Scraper</h3>
                     <h4>Python, Django</h4>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Developed a Python-based Django web app for real-time e-commerce price monitoring.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Utilized web scraping techniques to gather and display product data from multiple e-commerce websites.
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Provided users with automated price tracking and email notifications.
-                    </p>
+                    <button onclick="openInfoDialog('infoDialog2')" class="btn">More info</button>
+                    <div id="infoDialog2" class="infoDialog">
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Developed a Python-based Django web app for real-time e-commerce price monitoring.
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Utilized web scraping techniques to gather and display product data from multiple e-commerce websites.
+                        </p>
+                        <p>
+                            <i class="ri-checkbox-circle-line"></i>
+                            Provided users with automated price tracking and email notifications.
+                        </p>
+                        <button onclick="closeInfoDialog('infoDialog2')" class="btn">Close</button>
+                    </div>
                 </div>
-                <button class="btn">More info</button>
             </div>
             <div class="card">
                 <div class="content">
                     <h3>Startup Web Page</h3>
                     <h4>HTML,CSS,JS</h4>
+                    <button onclick="openInfoDialog('infoDialog3')" class="btn">More info</button>
+                    <div id="infoDialog3" class="infoDialog">
                     <p>
                         <i class="ri-checkbox-circle-line"></i>
                         Developed a website for a startup, initially focused on a simple and basic design but later incorporated advanced functionalities.
@@ -169,13 +176,16 @@
                         <i class="ri-checkbox-circle-line"></i>
                         Enhanced the startup's online presence and reputation by expanding its reach through the website.
                     </p>
+                    <button onclick="closeInfoDialog('infoDialog3')" class="btn">Close</button>
+                    </div>
                 </div>
-                <button class="btn">More info</button>
             </div>
             <div class="card">
                 <div class="content">
                     <h3>Inventory Management</h3>
                     <h4>Python, Excel</h4>
+                    <button onclick="openInfoDialog('infoDialog4')" class="btn">More info</button>
+                    <div id="infoDialog4" class="infoDialog">
                     <p>
                         <i class="ri-checkbox-circle-line"></i>
                         Designed and executed an Excel-based inventory management system for the business, encompassing tires, spare parts, and mechanical components.
@@ -188,13 +198,16 @@
                         <i class="ri-checkbox-circle-line"></i>
                         Implemented a Python script to analyze the inventory data, enabling the assessment of part usage, consumption trends, and important date-related information.
                     </p>
+                    <button onclick="closeInfoDialog('infoDialog4')" class="btn">Close</button>
+                    </div>
                 </div>
-                <button class="btn">More info</button>
             </div>
             <div class="card">
                 <div class="content">
                     <h3>Data Structures and Algorithms Visualizer</h3>
                     <h4>C++, Data Management</h4>
+                    <button onclick="openInfoDialog('infoDialog5')" class="btn">More info</button>
+                    <div id="infoDialog5" class="infoDialog">
                     <p>
                         <i class="ri-checkbox-circle-line"></i>
                         Build a visual representation of common data structures (linked lists, trees, graphs) and algorithms (sorting, searching) to demonstrate how they work in real-time.
@@ -207,13 +220,14 @@
                         <i class="ri-checkbox-circle-line"></i>
                         Allows for a visually engaging way to comprehend complex concepts.
                     </p>
+                    <button onclick="closeInfoDialog('infoDialog5')" class="btn">Close</button>
+                    </div>
                 </div>
-                <button class="btn">More info</button>
             </div>
         </div>
     </section>
 
-    <footer class="container">
+    <footer id="Contact" class="container">
         <span class="blur"></span>
         <span class="blur"></span>
         <div class="column">
@@ -248,8 +262,6 @@
             <a href="#">Terms & Conditions</a>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

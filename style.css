@@ -22,6 +22,23 @@ body{
     background-color: #18181B;
 }
 
+body.dialog-open {
+    overflow: hidden;
+}
+
+.infoDialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 nav{
     max-width: 1200px;
     margin: auto;

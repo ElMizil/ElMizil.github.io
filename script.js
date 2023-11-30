@@ -1,11 +1,5 @@
 function scrollToElement(elementSelector, instance = 0) {
-    // Select all elements that match the given selector
-    const elements = document.querySelectorAll(elementSelector);
-    // Check if there are elements matching the selector and if the requested instance exists
-    if (elements.length > instance) {
-        // Scroll to the specified instance of the element
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
-    }
+    elementSelector.scrollIntoView({ behavior: 'smooth' });
 }
 
 const link1 = document.getElementById("link1");
@@ -13,14 +7,26 @@ const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
 
 link1.addEventListener('click', () => {
-    scrollToElement('.header');
+    scrollToElement('Skills');
 });
 
 link2.addEventListener('click', () => {
     // Scroll to the second element with "header" class
-    scrollToElement('.header', 1);
+    scrollToElement('Projects');
 });
 
 link3.addEventListener('click', () => {
-    scrollToElement('.column');
+    scrollToElement('link3');
 });
+
+function openInfoDialog(dialogId) {
+    var dialog = document.getElementById(dialogId);
+    dialog.style.display = 'block';
+    document.body.classList.add('dialog-open');
+}
+
+  function closeInfoDialog(dialogId) {
+    var dialog = document.getElementById(dialogId);
+    dialog.style.display = 'none';
+    document.body.classList.remove('dialog-open');
+}
