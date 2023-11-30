@@ -320,9 +320,9 @@ footer .column .socials{
 
 footer .column .socials a{
     color: #ccc;
-    border: 1px solid #ccc;
+    border: 5px solid #ccc;
     padding: 5px 10px;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     border-radius: 100%;
     transition: all 0.3s ease;
 }
@@ -337,7 +337,21 @@ footer .column h4{
     color: #fff;
     margin-bottom: 2rem;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+footer .column h2{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+footer .column h1{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
 footer .column > a{
